@@ -8,4 +8,4 @@
 
 source /etc/profile
 module load anaconda/2023b
-source activate chemprop-v2
+source activate /home/gridsan/groups/qmdata/chemprop-v2-paper/env/chemprop-v2-benchmark
