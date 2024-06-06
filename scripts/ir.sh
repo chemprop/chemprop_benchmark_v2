@@ -9,7 +9,6 @@ chemprop hpopt \
 -t spectra \
 --data-path $data_path \
 --splits-file $splits_path \
---splits-file $splits_path \
 --raytune-num-samples 100 \
 --epochs 200 \
 --aggregation norm \
