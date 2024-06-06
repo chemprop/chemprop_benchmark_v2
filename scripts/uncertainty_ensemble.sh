@@ -2,7 +2,7 @@
 
 results_dir=results_uncertainty_ensemble
 data_path=../data/uncertainty/data.csv
-splits_path \=../data/uncertainty/splits.json
+splits_path=../data/uncertainty/splits.json
 
 #Hyperparameter optimization
 chemprop hpopt \

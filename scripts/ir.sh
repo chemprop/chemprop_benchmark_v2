@@ -2,7 +2,7 @@
 
 results_dir=results_ir
 data_path=../data/ir/data.csv
-splits_path \=../data/ir/splits.json
+splits_path=../data/ir/splits.json
 
 #Hyperparameter optimization
 chemprop hpopt \

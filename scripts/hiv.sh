@@ -2,7 +2,7 @@
 
 results_dir=results_hiv
 data_path=../data/hiv/data.csv
-splits_path \=../data/hiv/splits.json
+splits_path=../data/hiv/splits.json
 
 #Hyperparameter optimization
 chemprop hpopt \

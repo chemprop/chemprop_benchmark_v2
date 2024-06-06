@@ -2,7 +2,7 @@
 
 results_dir=results_qm9_u0
 data_path=../data/qm9/data.csv
-splits_path \=../data/qm9/splits.json
+splits_path=../data/qm9/splits.json
 
 #Hyperparameter optimization
 chemprop hpopt \

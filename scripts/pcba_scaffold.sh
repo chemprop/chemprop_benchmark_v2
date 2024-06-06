@@ -2,7 +2,7 @@
 
 results_dir=results_pcba_scaffold
 data_path=../data/pcba_scaffold/data.csv
-splits_path \=../data/pcba_scaffold/splits.json
+splits_path=../data/pcba_scaffold/splits.json
 
 #Hyperparameter optimization
 chemprop hpopt \

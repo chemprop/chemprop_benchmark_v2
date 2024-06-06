@@ -2,7 +2,7 @@
 
 results_dir=results_barriers_e2
 data_path=../data/barriers_e2/data.csv
-splits_path \=../data/barriers_e2/splits.json
+splits_path=../data/barriers_e2/splits.json
 
 #Hyperparameter optimization
 chemprop hpopt \

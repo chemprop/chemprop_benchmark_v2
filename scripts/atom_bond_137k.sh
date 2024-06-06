@@ -2,7 +2,7 @@
 
 results_dir=results_atom_bond_137k
 data_path=../data/atom_bond_137k/data.csv
-splits_path \=../data/atom_bond_137k/splits.json
+splits_path=../data/atom_bond_137k/splits.json
 train_constraints_path=../data/atom_bond_137k/train_constraints.csv
 val_constraints_path=../data/atom_bond_137k/val_constraints.csv
 test_constraints_path=../data/atom_bond_137k/test_constraints.csv

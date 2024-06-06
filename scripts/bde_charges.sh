@@ -2,7 +2,7 @@
 
 results_dir=results_bde_charges
 data_path=../data/bde_charges/data.csv
-splits_path \=../data/bde_charges/splits.json
+splits_path=../data/bde_charges/splits.json
 train_constraints_path=../data/bde_charges/train_constraints.csv
 val_constraints_path=../data/bde_charges/val_constraints.csv
 test_constraints_path=../data/bde_charges/test_constraints.csv

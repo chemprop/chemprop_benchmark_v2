@@ -2,7 +2,7 @@
 
 results_dir=results_pcba_random
 data_path=../data/pcba_random/data.csv
-splits_path \=../data/pcba_random/splits.json
+splits_path=../data/pcba_random/splits.json
 
 #Hyperparameter optimization
 chemprop hpopt \

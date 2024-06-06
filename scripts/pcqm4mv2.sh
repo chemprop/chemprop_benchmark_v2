@@ -13,7 +13,7 @@ source activate chemprop-v2
 
 results_dir=results_pcqm4mv2
 data_path=../data/pcqm4mv2/data.csv
-splits_path \=../data/pcqm4mv2/splits.json
+splits_path=../data/pcqm4mv2/splits.json
 
 #Hyperparameter optimization
  chemprop hpopt \

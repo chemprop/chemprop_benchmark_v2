@@ -13,7 +13,7 @@ source activate chemprop-v2
 
 results_dir=results_multi_molecule
 data_path=../data/multi_molecule/data.csv
-splits_path \=../data/multi_molecule/splits.json
+splits_path=../data/multi_molecule/splits.json
 
 #Hyperparameter optimization
 chemprop hpopt \

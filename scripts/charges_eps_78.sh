@@ -2,7 +2,7 @@
 
 results_dir=results_charges_eps_78
 data_path=../data/charges_eps_78/data.csv
-splits_path \=../data/charges_eps_78/splits.json
+splits_path=../data/charges_eps_78/splits.json
 train_constraints_path=../data/charges_eps_78/train_constraints.csv
 val_constraints_path=../data/charges_eps_78/val_constraints.csv
 test_constraints_path=../data/charges_eps_78/test_constraints.csv
