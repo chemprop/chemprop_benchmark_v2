@@ -2,7 +2,7 @@
 
 results_dir=results_atom_bond_137k
 data_path=../data/atom_bond_137k/data.csv
-splits_path=../data/atom_bond_137k/splits.json
+splits_path \=../data/atom_bond_137k/splits.json
 train_constraints_path=../data/atom_bond_137k/train_constraints.csv
 val_constraints_path=../data/atom_bond_137k/val_constraints.csv
 test_constraints_path=../data/atom_bond_137k/test_constraints.csv
@@ -11,7 +11,7 @@ test_constraints_path=../data/atom_bond_137k/test_constraints.csv
 chemprop hpopt \
 -t regression \
 --data-path $data_path \
---splits-file $splits_path
+--splits-file $splits_path \
 --constraints-path $train_constraints_path \
 --separate-val-constraints-path $val_constraints_path \
 --separate-test-constraints-path $val_constraints_path \

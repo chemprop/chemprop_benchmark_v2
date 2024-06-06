@@ -3,14 +3,14 @@
 results_dir=results_sampl
 results_dir2=results_sampl_production
 data_path=../data/logP/data.csv
-splits_path=../data/logP/splits.json
+splits_path \=../data/logP/splits.json
 path=../data/logP/logP_without_overlap.csv
 
 #Hyperparameter optimization
 chemprop hpopt \
 -t regression \
 --data-path $data_path \
---splits-file $splits_path
+--splits-file $splits_path \
 --raytune-num-samples 30 \
 --epochs 50 \
 --aggregation norm \
@@ -35,7 +35,7 @@ chemprop train \
 chemprop train \
 -t regression \
 --data-path $path \
---splits-file $splits_path
+--splits-file $splits_path \
 --separate-val-path $path \
 --separate-test-path $path \
 --epochs 40 \

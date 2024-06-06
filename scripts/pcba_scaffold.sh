@@ -2,13 +2,13 @@
 
 results_dir=results_pcba_scaffold
 data_path=../data/pcba_scaffold/data.csv
-splits_path=../data/pcba_scaffold/splits.json
+splits_path \=../data/pcba_scaffold/splits.json
 
 #Hyperparameter optimization
 chemprop hpopt \
 -t classification \
 --data-path $data_path \
---splits-file $splits_path
+--splits-file $splits_path \
 --raytune-num-samples 30 \
 --epochs 50 \
 --aggregation norm \

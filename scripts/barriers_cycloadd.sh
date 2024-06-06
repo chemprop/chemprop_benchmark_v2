@@ -2,13 +2,13 @@
 
 results_dir=results_barriers_cycloadd
 data_path=../data/barriers_cycloadd/data.csv
-splits_path=../data/barriers_cycloadd/splits.json
+splits_path \=../data/barriers_cycloadd/splits.json
 
 #Hyperparameter optimization
 chemprop hpopt \
 -t regression \
 --data-path $data_path \
---splits-file $splits_path
+--splits-file $splits_path \
 --raytune-num-samples 100 \
 --epochs 200 \
 --aggregation norm \

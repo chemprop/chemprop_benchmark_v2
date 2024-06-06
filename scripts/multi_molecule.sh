@@ -13,13 +13,13 @@ source activate chemprop-v2
 
 results_dir=results_multi_molecule
 data_path=../data/multi_molecule/data.csv
-splits_path=../data/multi_molecule/splits.json
+splits_path \=../data/multi_molecule/splits.json
 
 #Hyperparameter optimization
 chemprop hpopt \
 -t regression \
 --data-path $data_path \
---splits-file $splits_path
+--splits-file $splits_path \
 --raytune-num-samples 30 \
 --epochs 50 \
 --aggregation norm \

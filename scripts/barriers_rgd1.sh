@@ -2,13 +2,13 @@
 
 results_dir=results_barriers_rgd1
 data_path=../data/barriers_rgd1/data.csv
-splits_path=../data/barriers_rgd1/splits.json
+splits_path \=../data/barriers_rgd1/splits.json
 
 #Hyperparameter optimization
 chemprop hpopt \
 -t regression \
 --data-path $data_path \
---splits-file $splits_path
+--splits-file $splits_path \
 --raytune-num-samples 30 \
 --epochs 50 \
 --aggregation norm \

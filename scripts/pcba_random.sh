@@ -2,13 +2,13 @@
 
 results_dir=results_pcba_random
 data_path=../data/pcba_random/data.csv
-splits_path=../data/pcba_random/splits.json
+splits_path \=../data/pcba_random/splits.json
 
 #Hyperparameter optimization
 chemprop hpopt \
 -t classification \
 --data-path $data_path \
---splits-file $splits_path
+--splits-file $splits_path \
 --raytune-num-samples 30 \
 --epochs 50 \
 --aggregation norm \

@@ -2,13 +2,13 @@
 
 results_dir=results_bde
 data_path=../data/bde/data.csv
-splits_path=../data/bde/splits.json
+splits_path \=../data/bde/splits.json
 
 #Hyperparameter optimization
 chemprop hpopt \
 -t regression \
 --data-path $data_path \
---splits-file $splits_path
+--splits-file $splits_path \
 --raytune-num-samples 30 \
 --epochs 50 \
 --aggregation norm \

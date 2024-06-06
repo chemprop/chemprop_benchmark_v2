@@ -2,13 +2,13 @@
 
 results_dir=results_uncertainty_mve
 data_path=../data/uncertainty/data.csv
-splits_path=../data/uncertainty/splits.json
+splits_path \=../data/uncertainty/splits.json
 
 #Hyperparameter optimization
 chemprop hpopt \
 -t regression \
 --data-path $data_path \
---splits-file $splits_path
+--splits-file $splits_path \
 --raytune-num-samples 30 \
 --epochs 50 \
 --aggregation norm \

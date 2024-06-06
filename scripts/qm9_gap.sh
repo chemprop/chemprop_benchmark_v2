@@ -2,13 +2,13 @@
 
 results_dir=results_qm9_gap
 data_path=../data/qm9/data.csv
-splits_path=../data/qm9/splits.json
+splits_path \=../data/qm9/splits.json
 
 #Hyperparameter optimization
 chemprop hpopt \
 -t regression \
 --data-path $data_path \
---splits-file $splits_path
+--splits-file $splits_path \
 --raytune-num-samples 30 \
 --epochs 50 \
 --aggregation norm \

@@ -2,7 +2,7 @@
 
 results_dir=results_charges_eps_78
 data_path=../data/charges_eps_78/data.csv
-splits_path=../data/charges_eps_78/splits.json
+splits_path \=../data/charges_eps_78/splits.json
 train_constraints_path=../data/charges_eps_78/train_constraints.csv
 val_constraints_path=../data/charges_eps_78/val_constraints.csv
 test_constraints_path=../data/charges_eps_78/test_constraints.csv
@@ -13,7 +13,7 @@ external_test_constraints_path=../data/charges_eps_78/external_test_set_constrai
 chemprop hpopt \
 -t regression \
 --data-path $data_path \
---splits-file $splits_path
+--splits-file $splits_path \
 --constraints-path $train_constraints_path \
 --separate-val-constraints-path $val_constraints_path \
 --separate-test-constraints-path $val_constraints_path \
