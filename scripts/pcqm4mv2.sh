@@ -23,10 +23,8 @@ splits_path=../data/pcqm4mv2/splits.json
 --raytune-num-samples 30 \
 --epochs 50 \
 --aggregation norm \
---search-parameter-keywords depth ffn_num_layers  hidden_size ffn_hidden_size dropout \
---config-save-path $results_dir/config.json \
---hpopt-checkpoint-dir $results_dir \
---log-dir $results_dir 
+--search-parameter-keywords depth ffn_num_layers message_hidden_dim ffn_hidden_dim dropout \
+--hpopt-save-dir $results_dir \
 
 #Training with optimized hyperparameters
 chemprop train \
@@ -38,4 +36,4 @@ chemprop train \
 --save-dir $results_dir \
 --ensemble-size 5 \
 --metrics mae r2 \
-#--config-path $results_dir/config.json
+#--config-path $results_dir/best_config.toml
