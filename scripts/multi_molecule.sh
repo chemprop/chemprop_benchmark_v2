@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH -J multimolecule
-#SBATCH -o multimolecule-%j.out
+#SBATCH -J multi_molecule
+#SBATCH -o multi_molecule-%j.out
 #SBATCH -t 3-00:00:00
 #SBATCH -n 20
 #SBATCH -N 1
@@ -9,7 +9,7 @@
 
 source /etc/profile
 module load anaconda/2023b
-source activate chemprop-v2
+source activate chemprop-v2-bench
 
 results_dir=results_multi_molecule
 data_path=../data/multi_molecule/data.csv
@@ -18,6 +18,7 @@ splits_path=../data/multi_molecule/splits.json
 #Hyperparameter optimization
 chemprop hpopt \
 -t regression \
+-s smiles solvent \
 --data-path $data_path \
 --splits-file $splits_path \
 --raytune-num-samples 30 \
@@ -25,7 +26,6 @@ chemprop hpopt \
 --aggregation norm \
 --search-parameter-keywords depth ffn_num_layers message_hidden_dim ffn_hidden_dim dropout \
 --hpopt-save-dir $results_dir \
---number-of-molecules 2
 
 #Training with optimized hyperparameters
 chemprop train \
@@ -38,4 +38,4 @@ chemprop train \
 --save-dir $results_dir \
 --ensemble-size 5 \
 --metrics mae r2 \
-#--config-path $results_dir/best_config.toml
+--config-path $results_dir/best_config.toml

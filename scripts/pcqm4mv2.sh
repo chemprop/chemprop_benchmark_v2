@@ -9,17 +9,17 @@
 
 source /etc/profile
 module load anaconda/2023b
-source activate chemprop-v2
+source activate chemprop-v2-bench
 
 results_dir=results_pcqm4mv2
 data_path=../data/pcqm4mv2/data.csv
 splits_path=../data/pcqm4mv2/splits.json
 
 #Hyperparameter optimization
- chemprop hpopt \
+chemprop hpopt \
 -t regression \
 --data-path $data_path \
- --splits-file $splits_path \
+--splits-file $splits_path \
 --raytune-num-samples 30 \
 --epochs 50 \
 --aggregation norm \
@@ -36,4 +36,4 @@ chemprop train \
 --save-dir $results_dir \
 --ensemble-size 5 \
 --metrics mae r2 \
-#--config-path $results_dir/best_config.toml
+--config-path $results_dir/best_config.toml
