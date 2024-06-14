@@ -5,7 +5,8 @@
 #SBATCH -N 1
 #SBATCH -p xeon-g6-volta
 
-mkdir -p /state/partition1/user/$USER
+export RAY_TEMP_DIR=/state/partition1/user/$USER
+mkdir -p $RAY_TEMP_DIR
 
 source /etc/profile
 module load anaconda/2023b
