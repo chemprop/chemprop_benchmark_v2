@@ -21,7 +21,7 @@ chemprop hpopt \
 --raytune-temp-dir $RAY_TEMP_DIR \
 --raytune-num-cpus 40 \
 --raytune-num-gpus 2 \
---raytune-max-concurrent-trials 2
+--raytune-max-concurrent-trials 2 \
 --search-parameter-keywords depth ffn_num_layers message_hidden_dim ffn_hidden_dim dropout \
 --hpopt-save-dir $results_dir \
 --adding-h \
