@@ -14,7 +14,7 @@ chemprop hpopt \
 --aggregation norm \
 --search-parameter-keywords depth ffn_num_layers message_hidden_dim ffn_hidden_dim dropout max_lr final_lr init_lr batch_size warmup_epochs \
 --hpopt-save-dir $results_dir \
---reaction \
+--reaction-columns AAM \
 --keep-h 
 
 #Training with optimized hyperparameters
