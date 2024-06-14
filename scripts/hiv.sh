@@ -24,5 +24,5 @@ chemprop train \
 --aggregation norm \
 --save-dir $results_dir \
 --ensemble-size 5 \
---metrics prc \
+--metrics prc roc \
 --config-path $results_dir/best_config.toml
