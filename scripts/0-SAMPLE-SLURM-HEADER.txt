@@ -1,10 +1,10 @@
 #SBATCH -J title 
 #SBATCH -o title-%j.out
 #SBATCH -t 3-00:00:00
-#SBATCH --ntasks-per-node=20
+#SBATCH --exclusive
 #SBATCH -N 1
-#SBATCH --mem=40gb
-#SBATCH --gres=gpu:volta:1
+
+mkdir -p /state/partition1/user/$USER
 
 source /etc/profile
 module load anaconda/2023b
