@@ -25,5 +25,4 @@ chemprop train \
 --save-dir $results_dir \
 --ensemble-size 5 \
 --metrics mae \
---show-individual-scores \
 --config-path $results_dir/best_config.toml

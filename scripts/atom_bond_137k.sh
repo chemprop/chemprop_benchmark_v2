@@ -42,5 +42,4 @@ chemprop train \
 --no-adding-bond--types \
 --ensemble-size 5 \
 --metrics mae \
---show-individual-scores \
 --config-path $results_dir/best_config.toml
