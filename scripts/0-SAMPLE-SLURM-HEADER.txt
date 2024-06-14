@@ -7,7 +7,3 @@
 
 export RAY_TEMP_DIR=/state/partition1/user/$USER
 mkdir -p $RAY_TEMP_DIR
-
-source /etc/profile
-module load anaconda/2023b
-source activate /home/gridsan/groups/qmdata/chemprop-v2-paper/env/chemprop-v2-benchmark
