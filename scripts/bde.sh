@@ -19,7 +19,7 @@ chemprop hpopt \
 --search-parameter-keywords depth ffn_num_layers message_hidden_dim ffn_hidden_dim dropout \
 --hpopt-save-dir $results_dir \
 --adding-h \
---is-atom-bond--targets \
+--is-atom-bond-targets \
 --no-shared-atom-bond-ffn \
 --no-adding-bond--types
 
@@ -34,7 +34,7 @@ chemprop train \
 --adding-h \
 --is-atom-bond--targets \
 --no-shared-atom-bond-ffn \
---no-adding-bond--types \
+--no-adding-bond-types \
 --ensemble-size 5 \
 --metrics mae \
 --config-path $results_dir/best_config.toml
