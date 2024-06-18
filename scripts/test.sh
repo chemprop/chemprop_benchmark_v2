@@ -21,6 +21,7 @@ chemprop hpopt \
 --raytune-num-gpus 2 \
 --raytune-max-concurrent-trials 2 \
 --search-parameter-keywords depth ffn_num_layers message_hidden_dim ffn_hidden_dim dropout \
+--hyperopt-random-state-seed 42 \
 --hpopt-save-dir $results_dir \
 
 #Training with optimized hyperparameters
@@ -30,6 +31,7 @@ chemprop train \
 --separate-val-path $val_path \
 --separate-test-path $test_path \
 --epochs 50 \
+--pytorch-seed 42 \
 --aggregation norm \
 --config-path $results_dir/best_config.toml \
 --save-dir $results_dir \

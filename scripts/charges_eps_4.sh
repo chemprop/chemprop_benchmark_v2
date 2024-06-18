@@ -25,6 +25,7 @@ chemprop hpopt \
 --raytune-num-gpus 2 \
 --raytune-max-concurrent-trials 2 \
 --search-parameter-keywords depth ffn_num_layers message_hidden_dim ffn_hidden_dim dropout \
+--hyperopt-random-state-seed 42 \
 --hpopt-save-dir $results_dir \
 --adding-h \
 --is-atom-bond--targets \
@@ -40,6 +41,7 @@ chemprop train \
 --separate-val-constraints-path $val_constraints_path \
 --separate-test-constraints-path $test_constraints_path \
 --epochs 50 \
+--pytorch-seed 42 \
 --aggregation norm \
 --save-dir $results_dir \
 --adding-h \
