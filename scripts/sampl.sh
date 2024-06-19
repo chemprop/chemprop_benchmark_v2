@@ -52,7 +52,7 @@ chemprop predict \
 --test-path "../data/logP/sampl6_experimental.csv" \
 --preds-path $results_dir2/pred_SAMPL6.csv \
 --checkpoint-dir $results_dir2 \
---smiles-column "Isomeric SMILES"
+--smiles-columns "Isomeric SMILES"
 
 echo SAMPL6  >> $results_dir2/sampl.csv
 python -c 'import pandas as pd; from sklearn import metrics; print("rmse", metrics.mean_squared_error(pd.read_csv("results_sampl_production/pred_SAMPL6.csv")["logP"],pd.read_csv("../data/logP/sampl6_experimental.csv")["logP mean"],squared=False))' >> $results_dir2/sampl.csv
@@ -62,7 +62,7 @@ chemprop predict \
 --test-path "../data/logP/sampl7_experimental.csv" \
 --preds-path $results_dir2/pred_SAMPL7.csv \
 --checkpoint-dir $results_dir2 \
---smiles-column "Isomeric SMILES"
+--smiles-columns "Isomeric SMILES"
 
 echo SAMPL7 >> $results_dir2/sampl.csv
 python -c 'import pandas as pd; from sklearn import metrics; print("rmse", metrics.mean_squared_error(pd.read_csv("results_sampl_production/pred_SAMPL7.csv")["logP"],pd.read_csv("../data/logP/sampl7_experimental.csv")["logP mean"],squared=False))' >> $results_dir2/sampl.csv
@@ -72,7 +72,7 @@ chemprop predict \
 --test-path "../data/logP/sampl9_experimental.csv" \
 --preds-path $results_dir2/pred_SAMPL9.csv \
 --checkpoint-dir $results_dir2 \
---smiles-column smiles
+--smiles-columns smiles
 
 echo SAMPL9 >> $results_dir2/sampl.csv
 python -c 'import pandas as pd; from sklearn import metrics; print("rmse", metrics.mean_squared_error(pd.read_csv("results_sampl_production/pred_SAMPL9.csv")["logP"],pd.read_csv("../data/logP/sampl9_experimental.csv")["new_logPexp_reviewed"],squared=False))' >> $results_dir2/sampl.csv

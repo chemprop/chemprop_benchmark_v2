@@ -20,7 +20,7 @@ chemprop hpopt \
 --hyperopt-random-state-seed 42 \
 --hpopt-save-dir $results_dir \
 --keep-h \
---reaction-column rxn_smiles \
+--reaction-columns rxn_smiles \
 --target-columns G_act
 
 #Training with optimized hyperparameters
