@@ -12,6 +12,7 @@ chemprop hpopt \
 -t regression \
 --data-path $data_path \
 --splits-file $splits_path \
+--num-workers 20 \
 --constraints-path $train_constraints_path \
 --separate-val-constraints-path $val_constraints_path \
 --separate-test-constraints-path $val_constraints_path \
@@ -35,6 +36,7 @@ chemprop train \
 -t regression \
 --data-path $data_path \
 --splits-file $splits_path \
+--num-workers 20 \
 --constraints-path $train_constraints_path \
 --separate-val-constraints-path $val_constraints_path \
 --separate-test-constraints-path $test_constraints_path \

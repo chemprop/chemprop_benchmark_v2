@@ -8,6 +8,7 @@ chemprop train \
 -t regression \
 --data-path $data_dir/qm9_100k.csv \
 --splits-file $splits_path \
+--num-workers 20 \
 --save-dir $save_dir/qm9_100k \
 --aggregation norm \
 --depth 4 \
@@ -27,6 +28,7 @@ chemprop train \
 -t regression \
 --data-path $data_dir/qm9_10k.csv \
 --splits-file $splits_path \
+--num-workers 20 \
 --save-dir $save_dir/qm9_10k \
 --aggregation norm \
 --depth 4 \
@@ -45,6 +47,7 @@ chemprop train \
 -t regression \
 --data-path $data_dir/qm9_1k.csv \
 --splits-file $splits_path \
+--num-workers 20 \
 --save-dir $save_dir/qm9_1k \
 --aggregation norm \
 --depth 4 \

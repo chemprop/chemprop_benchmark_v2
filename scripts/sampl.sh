@@ -12,6 +12,7 @@ chemprop hpopt \
 -t regression \
 --data-path $data_path \
 --splits-file $splits_path \
+--num-workers 20 \
 --raytune-num-samples 30 \
 --epochs 50 \
 --aggregation norm \
@@ -28,6 +29,7 @@ chemprop train \
 -t regression \
 --data-path $data_path \
 --splits-file $splits_path \
+--num-workers 20 \
 --epochs 50 \
 --pytorch-seed 42 \
 --aggregation norm \

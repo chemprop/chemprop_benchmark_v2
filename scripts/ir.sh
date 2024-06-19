@@ -9,6 +9,7 @@ chemprop hpopt \
 -t spectra \
 --data-path $data_path \
 --splits-file $splits_path \
+--num-workers 20 \
 --raytune-num-samples 100 \
 --epochs 200 \
 --aggregation norm \
@@ -25,6 +26,7 @@ chemprop train \
 -t spectral \
 --data-path $data_path \
 --splits-file $splits_path \
+--num-workers 20 \
 --epochs 200 \
 --pytorch-seed 42 \
 --aggregation norm \
