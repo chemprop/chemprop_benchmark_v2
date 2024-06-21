@@ -53,7 +53,7 @@ chemprop train \
 chemprop predict \
 --test-path "../data/logP/sampl6_experimental.csv" \
 --preds-path $results_dir2/pred_SAMPL6.csv \
---checkpoint-dir $results_dir2 \
+--model-path $results_dir2 \
 --smiles-columns "Isomeric SMILES"
 
 echo SAMPL6  >> $results_dir2/sampl.csv
@@ -63,7 +63,7 @@ python -c 'import pandas as pd; from sklearn import metrics; print("rmse", metri
 chemprop predict \
 --test-path "../data/logP/sampl7_experimental.csv" \
 --preds-path $results_dir2/pred_SAMPL7.csv \
---checkpoint-dir $results_dir2 \
+--model-path $results_dir2 \
 --smiles-columns "Isomeric SMILES"
 
 echo SAMPL7 >> $results_dir2/sampl.csv
@@ -73,7 +73,7 @@ python -c 'import pandas as pd; from sklearn import metrics; print("rmse", metri
 chemprop predict \
 --test-path "../data/logP/sampl9_experimental.csv" \
 --preds-path $results_dir2/pred_SAMPL9.csv \
---checkpoint-dir $results_dir2 \
+--model-path $results_dir2 \
 --smiles-columns smiles
 
 echo SAMPL9 >> $results_dir2/sampl.csv
