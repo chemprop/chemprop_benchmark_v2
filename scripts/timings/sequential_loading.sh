@@ -1,7 +1,7 @@
 #!/bin/bash
 
 save_dir=../results_timing
-data_dir=../../../data/timing
+data_dir=../../data/timing
 
 chemprop train \
 --data-path $data_dir/qm9_100k.csv \
