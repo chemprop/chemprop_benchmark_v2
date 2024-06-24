@@ -4,9 +4,9 @@ save_dir=../results_timing
 data_dir=../../../data/timing
 
 chemprop train \
---data-path $data_dir/qm9_20k.csv \
---splits-file $data_dir/20k_splits.json \
---save-dir $save_dir/qm9_20k \
+--data-path $data_dir/qm9_5k.csv \
+--splits-file $data_dir/5k_splits.json \
+--save-dir $save_dir/qm9_5k \
 --depth 4 \
 --message-hidden-dim 1000 \
 --ffn-num-layers 2 \
