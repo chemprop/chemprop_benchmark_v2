@@ -11,7 +11,7 @@ chemprop train \
 --message-hidden-dim 300 \
 --ffn-num-layers 1 \
 --ffn-hidden-dim 300 \
---num-workers 1 \
+--num-workers 0 \
 --batch-size 64 \
 --accelerator gpu \
 --devices 1 \

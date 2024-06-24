@@ -8,6 +8,7 @@ chemprop predict \
 --preds-path $save_dir/qm9_10k/preds.csv \
 --model-path $save_dir/qm9_10k \
 --num-workers 8 \
+--batch-size 64 \
 --accelerator gpu \
 --devices 1
 
