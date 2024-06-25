@@ -1,1 +1,0 @@
-qm9_500.csv and qm9_5k.csv are the the first 500 and 5k datapoints of qm9_100k.csv available at https://zenodo.org/records/10078142
