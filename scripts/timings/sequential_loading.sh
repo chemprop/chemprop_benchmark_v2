@@ -1,12 +1,29 @@
 #!/bin/bash
 
-save_dir=../results_timing
-data_dir=../../data/timing
+#SBATCH -J sequential_loading
+#SBATCH -o sequential_loading-%j.out
+#SBATCH -t 01:00:00
+#SBATCH --exclusive
+#SBATCH -N 1
+#SBATCH -p xeon-g6-volta
 
-chemprop train \
+save_dir=../results_timing/sequential_loading
+data_dir=../../../data/timing
+
+mkdir $save_dir
+
+chemprop -h # Load and cache all the python packages for correct timing of the actual chemprop train call
+
+nvidia-smi \
+--query-gpu=index,timestamp,name,pstate,memory.used,utilization.gpu,utilization.memory,power.draw,temperature.gpu \
+--format=csv -l 10 > $save_dir/gpu_stats_train.csv &
+nvidia-smi --query-compute-apps=timestamp,pid,process_name,used_memory \
+--format=csv -l 10 > $save_dir/process_stats_train.csv &
+
+/usr/bin/time -v chemprop train \
 --data-path $data_dir/qm9_100k.csv \
 --splits-file $data_dir/100k_splits.json \
---save-dir $save_dir/qm9_100k \
+--save-dir $save_dir \
 --depth 3 \
 --message-hidden-dim 300 \
 --ffn-num-layers 1 \

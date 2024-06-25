@@ -1,12 +1,16 @@
 #!/bin/bash
 
-save_dir=../results_timing
+save_dir=../results_timing/laptop_gpu
 data_dir=../../../data/timing
 
-chemprop train \
+mkdir -p $save_dir
+
+chemprop -h # Load and cache all the python packages for correct timing of the actual chemprop train call
+
+/usr/bin/time -v chemprop train \
 --data-path $data_dir/qm9_100k.csv \
 --splits-file $data_dir/100k_splits.json \
---save-dir $save_dir/qm9_100k \
+--save-dir $save_dir \
 --depth 3 \
 --message-hidden-dim 300 \
 --ffn-num-layers 1 \

@@ -1,12 +1,22 @@
 #!/bin/bash
 
-save_dir=../results_timing
+save_dir=../results_timing/singlenode_4GPU
 data_dir=../../../data/timing
 
-chemprop train \
+mkdir $save_dir
+
+chemprop -h # Load and cache all the python packages for correct timing of the actual chemprop train call
+
+nvidia-smi \
+--query-gpu=index,timestamp,name,pstate,memory.used,utilization.gpu,utilization.memory,power.draw,temperature.gpu \
+--format=csv -l 10 > $save_dir/gpu_stats_train.csv &
+nvidia-smi --query-compute-apps=timestamp,pid,process_name,used_memory \
+--format=csv -l 10 > $save_dir/process_stats_train.csv &
+
+/usr/bin/time -v chemprop train \
 --data-path $data_dir/qm9_100k.csv \
 --splits-file $data_dir/100k_splits.json \
---save-dir $save_dir/qm9_100k \
+--save-dir $save_dir \
 --depth 3 \
 --message-hidden-dim 300 \
 --ffn-num-layers 1 \

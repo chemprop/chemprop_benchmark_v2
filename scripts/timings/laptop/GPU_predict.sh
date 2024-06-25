@@ -1,12 +1,16 @@
 #!/bin/bash
 
-save_dir=../results_timing
+save_dir=../results_timing/laptop_gpu
 data_dir=../../../data/timing
 
-chemprop predict \
---test-path $data_dir/qm9_100k.csv \
---preds-path $save_dir/qm9_100k/preds.csv \
---model-path $save_dir/qm9_100k \
+mkdir -p $save_dir
+
+chemprop -h # Load and cache all the python packages for correct timing of the actual chemprop train call
+
+/usr/bin/time -v chemprop predict \
+-i $data_dir/qm9_100k.csv \
+-o $save_dir/preds.csv \
+--model-path $save_dir \
 --num-workers 8 \
 --batch-size 64 \
 --accelerator gpu \

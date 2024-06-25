@@ -9,10 +9,9 @@ import torch
 from chemprop import data, featurizers, models, nn
 from chemprop.cli.utils import parse_indices
 
-def main(num_nodes):
+def main(save_dir, num_nodes):
     torch.manual_seed(0)
 
-    save_dir = "../results_timing"
     model_output_dir = Path(save_dir) / "model_0"
     model_output_dir.mkdir(exist_ok=True, parents=True)
 
@@ -77,5 +76,6 @@ def main(num_nodes):
     results = trainer.test(mpnn, test_loader)
 
 if __name__ == "__main__":
-    num_nodes = sys.argv[1]
-    main(num_nodes)
+    save_dir = sys.argv[1]
+    num_nodes = sys.argv[2]
+    main(save_dir, num_nodes)
