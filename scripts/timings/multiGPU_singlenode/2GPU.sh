@@ -3,7 +3,7 @@
 save_dir=../results_timing/singlenode_2GPU
 data_dir=../../../data/timing
 
-mkdir $save_dir
+mkdir -p $save_dir
 
 chemprop -h # Load and cache all the python packages for correct timing of the actual chemprop train call
 
