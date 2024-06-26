@@ -77,5 +77,5 @@ def main(save_dir, num_nodes):
 
 if __name__ == "__main__":
     save_dir = sys.argv[1]
-    num_nodes = sys.argv[2]
+    num_nodes = int(sys.argv[2])
     main(save_dir, num_nodes)

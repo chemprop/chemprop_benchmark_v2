@@ -7,6 +7,7 @@
 #SBATCH -t 01:00:00
 #SBATCH --exclusive
 #SBATCH -p xeon-g6-volta
+#SBATCH --gres=gpu:volta:1
 
 save_dir=../results_timing/2GPU
 
@@ -20,4 +21,4 @@ nvidia-smi \
 nvidia-smi --query-compute-apps=timestamp,pid,process_name,used_memory \
 --format=csv -l 10 > $save_dir/process_stats_train.csv &
 
-srun /usr/bin/time -v python3 run_chemprop.py $save_dir 2
+srun --ntasks-per-node=1 --nodes=2 /usr/bin/time -v python3 run_chemprop.py $save_dir 2

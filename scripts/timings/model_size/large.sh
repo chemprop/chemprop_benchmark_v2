@@ -2,7 +2,7 @@
 
 #SBATCH -J large_size_model
 #SBATCH -o large_size_model-%j.out
-#SBATCH -t 01:00:00
+#SBATCH -t 02:00:00
 #SBATCH --exclusive
 #SBATCH -N 1
 #SBATCH -p xeon-g6-volta

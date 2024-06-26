@@ -20,4 +20,4 @@ nvidia-smi \
 nvidia-smi --query-compute-apps=timestamp,pid,process_name,used_memory \
 --format=csv -l 10 > $save_dir/process_stats_train.csv &
 
-srun /usr/bin/time -v python3 run_chemprop.py $save_dir 4
+srun --ntasks-per-node=1 --nodes=4 /usr/bin/time -v python3 run_chemprop.py $save_dir 4
