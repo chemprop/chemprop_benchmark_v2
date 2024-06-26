@@ -7,8 +7,8 @@
 #SBATCH -N 1
 #SBATCH -p xeon-g6-volta
 
-save_dir=../results_timing/sequential_loading
-data_dir=../../../data/timing
+save_dir=results_timing/sequential_loading
+data_dir=../../data/timing
 
 mkdir -p $save_dir
 
