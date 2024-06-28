@@ -13,6 +13,7 @@ chemprop hpopt \
 --raytune-num-samples 30 \
 --epochs 50 \
 --aggregation norm \
+--no-batch-norm \
 --raytune-temp-dir $RAY_TEMP_DIR \
 --raytune-num-cpus 40 \
 --raytune-num-gpus 2 \
@@ -34,6 +35,7 @@ chemprop train \
 --epochs 50 \
 --pytorch-seed 42 \
 --aggregation norm \
+--no-batch-norm \
 --save-dir $results_dir \
 --adding-h \
 --is-atom-bond--targets \
