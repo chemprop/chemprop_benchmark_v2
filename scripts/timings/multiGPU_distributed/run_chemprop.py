@@ -45,6 +45,9 @@ def main(save_dir, num_nodes):
     val_dset = data.MoleculeDataset(val_data, featurizer)
     val_dset.normalize_targets(scaler)
 
+    train_dset.cache = True
+    val_dset.cache = True
+
     test_dset = data.MoleculeDataset(test_data, featurizer)
 
     train_loader = data.build_dataloader(train_dset, seed=0)
@@ -57,7 +60,7 @@ def main(save_dir, num_nodes):
     output_transform = nn.UnscaleTransform.from_standard_scaler(scaler)
     ffn = nn.RegressionFFN(output_transform=output_transform)
 
-    mpnn = models.MPNN(mp, agg, ffn)
+    mpnn = models.MPNN(mp, agg, ffn, batch_norm=False)
 
     trainer = pl.Trainer(
         logger=False,

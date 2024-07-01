@@ -28,7 +28,7 @@ nvidia-smi --query-compute-apps=timestamp,pid,process_name,used_memory \
 --message-hidden-dim 1000 \
 --ffn-num-layers 2 \
 --ffn-hidden-dim 1000 \
---num-workers 8 \
+--num-workers 0 \
 --batch-size 64 \
 --accelerator gpu \
 --devices 1 \
@@ -44,3 +44,4 @@ nvidia-smi --query-compute-apps=timestamp,pid,process_name,used_memory \
 --final-lr 0.0001 \
 --data-seed 0 \
 --pytorch-seed 0 \
+--no-batch-norm

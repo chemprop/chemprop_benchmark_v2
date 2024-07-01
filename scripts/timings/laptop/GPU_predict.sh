@@ -11,7 +11,7 @@ chemprop -h # Load and cache all the python packages for correct timing of the a
 -i $data_dir/qm9_100k.csv \
 -o $save_dir/preds.csv \
 --model-path $save_dir \
---num-workers 8 \
+--num-workers 0 \
 --batch-size 64 \
 --accelerator gpu \
 --devices 1 

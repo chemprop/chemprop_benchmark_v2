@@ -24,7 +24,7 @@ nvidia-smi --query-compute-apps=timestamp,pid,process_name,used_memory \
 -i $data_dir/qm9_500.csv \
 -o $save_dir/preds.csv \
 --model-path $save_dir \
---num-workers 8 \
+--num-workers 0 \
 --batch-size 64 \
 --accelerator gpu \
 --devices 1

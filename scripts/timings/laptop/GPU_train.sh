@@ -15,7 +15,7 @@ chemprop -h # Load and cache all the python packages for correct timing of the a
 --message-hidden-dim 300 \
 --ffn-num-layers 1 \
 --ffn-hidden-dim 300 \
---num-workers 8 \
+--num-workers 0 \
 --batch-size 64 \
 --accelerator gpu \
 --devices 1 \
@@ -31,3 +31,4 @@ chemprop -h # Load and cache all the python packages for correct timing of the a
 --final-lr 0.0001 \
 --data-seed 0 \
 --pytorch-seed 0 \
+--no-batch-norm
