@@ -44,3 +44,4 @@ nvidia-smi --query-compute-apps=timestamp,pid,process_name,used_memory \
 --final-lr 0.0001 \
 --data-seed 0 \
 --pytorch-seed 0 \
+--no-batch-norm
