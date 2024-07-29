@@ -1,0 +1,65 @@
+## ***************************************************************************
+## * LINES                                                                   *
+## ***************************************************************************
+lines.linewidth: 2
+lines.markeredgecolor: k
+lines.markeredgewidth: 1.5
+
+## ***************************************************************************
+## * BOXPLOT                                                                 *
+## ***************************************************************************
+boxplot.whiskers: 1.5
+boxplot.vertical: True
+boxplot.patchartist: True
+boxplot.showmeans: True
+boxplot.meanline: False
+boxplot.boxprops.linewidth: 1.5
+boxplot.capprops.linewidth: 1.5
+boxplot.whiskerprops.linewidth: 1.5
+boxplot.medianprops.linewidth: 1.5
+boxplot.medianprops.color: C0
+boxplot.meanprops.marker: ^
+boxplot.meanprops.markerfacecolor: w
+boxplot.meanprops.markeredgecolor: k
+
+## ***************************************************************************
+## * PATCHES                                                                 *
+## ***************************************************************************
+patch.facecolor: None
+patch.edgecolor: k
+
+## ***************************************************************************
+## * AXES                                                                    *
+## ***************************************************************************
+axes.grid: True
+axes.linewidth: 1.5
+axes.axisbelow: True
+
+## ***************************************************************************
+## * TICKS                                                                   *
+## ***************************************************************************
+## See https://matplotlib.org/stable/api/axis_api.html#matplotlib.axis.Tick
+xtick.bottom: True
+xtick.labelbottom: True
+xtick.major.width: 1.5
+xtick.minor.width: 1 
+
+ytick.left: True
+ytick.labelleft: True
+ytick.major.width: 1.5
+ytick.minor.width: 1 
+
+## ***************************************************************************
+## * GRIDS                                                                   *
+## ***************************************************************************
+grid.linestyle: (0, (5, 3.1))
+
+## ***************************************************************************
+## * HISTOGRAM PLOTS                                                         *
+## ***************************************************************************
+hist.bins: auto  # The default number of histogram bins or 'auto'.
+
+## ***************************************************************************
+## * SAVING FIGURES                                                          *
+## ***************************************************************************
+savefig.bbox: tight
