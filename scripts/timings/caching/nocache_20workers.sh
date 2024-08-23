@@ -1,13 +1,13 @@
 #!/bin/bash
 
-#SBATCH -J nocache
-#SBATCH -o nocache-%j.out
+#SBATCH -J nocache_20workers
+#SBATCH -o nocache_20workers-%j.out
 #SBATCH -t 01:00:00
 #SBATCH --exclusive
 #SBATCH -N 1
 #SBATCH -p xeon-g6-volta
 
-save_dir=results_timing/nocache
+save_dir=results_timing/nocache_20workers
 data_dir=../../data/timing
 
 mkdir -p $save_dir
@@ -28,7 +28,7 @@ nvidia-smi --query-compute-apps=timestamp,pid,process_name,used_memory \
 --message-hidden-dim 300 \
 --ffn-num-layers 1 \
 --ffn-hidden-dim 300 \
---num-workers 0 \
+--num-workers 20 \
 --batch-size 64 \
 --accelerator gpu \
 --devices 1 \

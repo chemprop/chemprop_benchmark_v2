@@ -1,13 +1,13 @@
 #!/bin/bash
 
-#SBATCH -J sequential_loading
-#SBATCH -o sequential_loading-%j.out
+#SBATCH -J nocache_8workers
+#SBATCH -o nocache_8workers-%j.out
 #SBATCH -t 01:00:00
 #SBATCH --exclusive
 #SBATCH -N 1
 #SBATCH -p xeon-g6-volta
 
-save_dir=results_timing/sequential_loading
+save_dir=results_timing/nocache_8workers
 data_dir=../../data/timing
 
 mkdir -p $save_dir
@@ -28,7 +28,7 @@ nvidia-smi --query-compute-apps=timestamp,pid,process_name,used_memory \
 --message-hidden-dim 300 \
 --ffn-num-layers 1 \
 --ffn-hidden-dim 300 \
---num-workers 20 \
+--num-workers 8 \
 --batch-size 64 \
 --accelerator gpu \
 --devices 1 \
