@@ -1,4 +1,4 @@
-# Chemprop benchmarking scripts and data
+# Chemprop v2 benchmarking scripts and data
 
 This repository contains benchmarking scripts and data for Chemprop v2, a message passing neural network for molecular property prediction, as described in the paper [Chemprop v2: Modular, Fast, and User-Friendly](INSERT_PREPRINT_DOI). Please refer to the [Chemprop repository](https://github.com/chemprop/chemprop) for installation and usage instructions.
 
