@@ -1,4 +1,5 @@
 # Chemprop v2 benchmarking scripts and data
+[![DOI](https://zenodo.org/badge/810352990.svg)](https://doi.org/10.5281/zenodo.15678750)
 
 This repository contains benchmarking scripts and data for Chemprop v2, a message passing neural network for molecular property prediction, as described in the paper [Chemprop v2: Modular, Fast, and User-Friendly](INSERT_PREPRINT_DOI). Please refer to the [Chemprop repository](https://github.com/chemprop/chemprop) for installation and usage instructions.
 
