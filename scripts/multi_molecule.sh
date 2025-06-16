@@ -1,15 +1,4 @@
 #!/bin/bash
-#SBATCH -J multi_molecule
-#SBATCH -o multi_molecule-%j.out
-#SBATCH -t 3-00:00:00
-#SBATCH -n 20
-#SBATCH -N 1
-#SBATCH --mem=40gb
-#SBATCH --gres=gpu:volta:1
-
-source /etc/profile
-module load anaconda/2023b
-source activate chemprop-v2-bench
 
 results_dir=results_multi_molecule
 data_path=../data/multi_molecule/data.csv
