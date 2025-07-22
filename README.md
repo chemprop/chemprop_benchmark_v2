@@ -35,7 +35,7 @@ The following benchmarking systems were used in the paper:
  * `qm9_multitask` DFT calculated properties from MoleculeNet and OGB, trained as a multi-task model
  * `qm9_u0` DFT calculated properties from MoleculeNet and OGB, trained as a single-task model on the target U0 only
  * `qm9_gap` DFT calculated properties from MoleculeNet and OGB, trained as a single-task model on the target gap only
- * `sampl` Water-octanol partition coefficients, used to predict molecules from the SAMPL6, 7 and 9 challenges
+ * `sampl` octanol–water partition coefficients (SAMPL6 & 7) and toluene–water partition coefficients (SAMPL9)
  * `barriers_e2` Reaction barrier heights of E2 reactions
  * `barriers_sn2` Reaction barrier heights of S<sub>N</sub>2 reactions
  * `barriers_cycloadd` Reaction barrier heights of cycloaddition reactions
